@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><reservationData>
+
+    <!--   <client><name/><order/><price/><table/></client>-->
+
+
+    <!--    <name/><order/><price/><table/></client>-->
+    <!--  <client id="1">-->
+    <!--   <name/>-->
+    <!--    <order/>-->
+    <!--    <date/>-->
+    <!--    <table/>-->
+    <!--  </client>-->
+    <!--  <client id="1">-->
+    <!--      <name/>-->
+    <!--    <order/>-->
+    <!--    <date/>-->
+    <!--    <table/>-->
+    <!--  </client>-->
+    <!--  <client id="1">-->
+    <!--    <name/>-->
+    <!--    <order/>-->
+    <!--    <date/>-->
+    <!--    <table/>-->
+    <!--  </client>-->
+<client><name>John Doe</name><order>Beef Steak</order><price>80</price><table>6</table><type>main_course</type></client></reservationData>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.User">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="242.0" style="-fx-background-color: #2F323F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button alignment="CENTER_RIGHT" layoutX="50.0" layoutY="44.0" mnemonicParsing="false" onAction="#addOrder" prefHeight="80.0" prefWidth="142.0" style="-fx-background-color: #8AEBAF;" text="Add Order" textAlignment="RIGHT" textFill="#2f323f">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" layoutX="28.0" layoutY="597.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="59.0" prefWidth="187.0" style="-fx-background-color: #8AEBAF;" text="Log Out" textAlignment="RIGHT" textFill="#2f323f">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="receipt" editable="false" layoutX="22.0" layoutY="169.0" prefHeight="350.0" prefWidth="200.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </TextArea>
+         </children></Pane>
+      <Pane layoutX="242.0" prefHeight="184.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle fx:id="rec_app" arcHeight="5.0" arcWidth="5.0" fill="#8aebaf" height="5.0" layoutX="246.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="142.0" />
+            <Rectangle fx:id="rec_main" arcHeight="5.0" arcWidth="5.0" fill="#8aebaf" height="5.0" layoutX="51.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="142.0" />
+            <Rectangle fx:id="rec_des" arcHeight="5.0" arcWidth="5.0" fill="#8aebaf" height="5.0" layoutX="434.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="142.0" />
+            <Button layoutX="49.0" layoutY="116.0" mnemonicParsing="false" onAction="#mainActionPerformed" prefHeight="65.0" prefWidth="142.0" style="-fx-background-color: #2F323F;" text="Main Course" textFill="#8aebaf">
+               <font>
+                  <Font name="Calibri Bold Italic" size="18.0" />
+               </font></Button>
+            <Button layoutX="246.0" layoutY="116.0" mnemonicParsing="false" onAction="#appetizerActionPerformed" prefHeight="65.0" prefWidth="142.0" style="-fx-background-color: #2F323F;" text="Appitizer" textFill="#8aebaf">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Button>
+            <Button layoutX="434.0" layoutY="116.0" mnemonicParsing="false" onAction="#dessertActionPerformed" prefHeight="65.0" prefWidth="142.0" style="-fx-background-color: #2F323F;" text="Dessert" textFill="#8aebaf">
+               <font>
+                  <Font name="Calibri Bold Italic" size="18.0" />
+               </font></Button>
+            <Button layoutX="606.0" layoutY="116.0" mnemonicParsing="false" onMouseClicked="#reservetable" prefHeight="65.0" prefWidth="142.0" style="-fx-background-color: #2F323F;" text="Tables" textFill="#8aebaf">
+               <font>
+                  <Font name="Calibri Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Rectangle fx:id="rec_table" arcHeight="5.0" arcWidth="5.0" fill="#8aebaf" height="5.0" layoutX="611.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="133.0" />
+         </children></Pane>
+      <AnchorPane layoutX="242.0" layoutY="184.0" prefHeight="516.0" prefWidth="758.0" style="-fx-background-color: #2F323F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="184.0">
+         <children>
+            <Pane fx:id="pi_dessert" layoutX="10.0" layoutY="10.0" prefHeight="396.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="50.0" layoutY="11.0" prefHeight="53.0" prefWidth="101.0" text="MENU LIST" textFill="#8aebaf">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="1.0" layoutY="57.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="34.0" prefWidth="30.0" text="#" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="540.0" layoutY="6.0" prefHeight="34.0" prefWidth="124.0" text="Price after Taxes" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="323.0" layoutY="6.0" prefHeight="34.0" prefWidth="149.0" text="Price before Taxes " textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="9.0" prefHeight="34.0" prefWidth="124.0" text="Name" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="1.0" layoutY="102.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="563.0" layoutY="6.0" prefHeight="34.0" prefWidth="79.0" text="60.0" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="6.0" prefHeight="34.0" prefWidth="49.0" text="50" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="pie" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#foodOrder" prefHeight="18.0" prefWidth="225.0" text="Apple pie " textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="foodorder" />
+                           </toggleGroup>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="1.0" layoutY="147.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="563.0" layoutY="6.0" prefHeight="34.0" prefWidth="79.0" text="72.0" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="6.0" prefHeight="34.0" prefWidth="49.0" text="60" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="cake" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#foodOrder" prefHeight="18.0" prefWidth="225.0" text="Molten Cake" textFill="#8aebaf" toggleGroup="$foodorder">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="pi_main" prefHeight="396.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="50.0" layoutY="11.0" prefHeight="53.0" prefWidth="101.0" text="MENU LIST" textFill="#8aebaf">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="1.0" layoutY="57.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="34.0" prefWidth="30.0" text="#" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="547.0" layoutY="6.0" prefHeight="34.0" prefWidth="133.0" text="Price after Taxes" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="317.0" layoutY="6.0" prefHeight="34.0" prefWidth="142.0" text=" Price befor Taxes" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="9.0" prefHeight="34.0" prefWidth="124.0" text="Name" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="1.0" layoutY="102.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="563.0" layoutY="6.0" prefHeight="34.0" prefWidth="79.0" text="92.0" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="6.0" prefHeight="34.0" prefWidth="49.0" text="80" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="beef" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#foodOrder" prefHeight="24.0" prefWidth="208.0" text="Beaf Steak" textAlignment="RIGHT" textFill="#8aebaf" toggleGroup="$foodorder">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="147.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="563.0" layoutY="6.0" prefHeight="34.0" prefWidth="79.0" text="69.0" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="6.0" prefHeight="34.0" prefWidth="49.0" text="60" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="soup" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#foodOrder" prefHeight="24.0" prefWidth="208.0" text="Mushroom Soup" textAlignment="RIGHT" textFill="#8aebaf" toggleGroup="$foodorder">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="1.0" layoutY="192.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="563.0" layoutY="6.0" prefHeight="34.0" prefWidth="79.0" text="86.25" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="6.0" prefHeight="34.0" prefWidth="49.0" text="75" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="chicken" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#foodOrder" prefHeight="24.0" prefWidth="208.0" text="Grilled Chicken" textAlignment="RIGHT" textFill="#8aebaf" toggleGroup="$foodorder">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="pi_appetizer" layoutX="10.0" layoutY="10.0" prefHeight="396.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="50.0" layoutY="11.0" prefHeight="53.0" prefWidth="101.0" text="MENU LIST" textFill="#8aebaf">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="1.0" layoutY="57.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="34.0" prefWidth="30.0" text="#" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="541.0" layoutY="6.0" prefHeight="34.0" prefWidth="124.0" text="Price after Taxes" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="332.0" layoutY="6.0" prefHeight="34.0" prefWidth="133.0" text="Price befoe Taxes" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="9.0" prefHeight="34.0" prefWidth="124.0" text="Name" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="1.0" layoutY="102.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="563.0" layoutY="6.0" prefHeight="34.0" prefWidth="79.0" text="33.0" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="6.0" prefHeight="34.0" prefWidth="49.0" text="30" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="potatos" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#foodOrder" prefHeight="18.0" prefWidth="225.0" text="Fried Potates" textFill="#8aebaf" toggleGroup="$foodorder">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="147.0" prefHeight="45.0" prefWidth="758.0" style="-fx-background-color: #2F323F; -fx-border-color: #212121;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="563.0" layoutY="6.0" prefHeight="34.0" prefWidth="79.0" text="38.5" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="6.0" prefHeight="34.0" prefWidth="49.0" text="35" textAlignment="CENTER" textFill="#8aebaf">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="salad" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#foodOrder" prefHeight="18.0" prefWidth="225.0" text="Greek Salad" textFill="#8aebaf" toggleGroup="$foodorder">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Button alignment="CENTER" layoutX="256.0" layoutY="423.0" mnemonicParsing="false" onAction="#confirmOrder" onMouseClicked="#logout" prefHeight="59.0" prefWidth="160.0" style="-fx-background-color: #8AEBAF;" text="Confirm Order" textAlignment="RIGHT" textFill="#2f323f">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

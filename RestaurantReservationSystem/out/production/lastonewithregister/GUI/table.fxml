@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="470.0" prefWidth="402.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Table">
+   <children>
+      <GridPane hgap="20.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="402.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label contentDisplay="RIGHT" prefHeight="47.0" prefWidth="125.0" text="Smoking" textAlignment="CENTER" textFill="#09b26f" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@smoke.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label contentDisplay="RIGHT" layoutX="40.0" layoutY="30.0" prefHeight="46.0" prefWidth="152.0" text="Non-Smoking" textAlignment="CENTER" textFill="#09b26f" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@non-smoking-area.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="Table3" mnemonicParsing="false" onAction="#table3" prefHeight="26.0" prefWidth="51.0" style="-fx-background-radius: 70; -fx-background-color: #09B26F; -fx-border-radius: 70;" text="3" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Table5" layoutX="77.0" layoutY="77.0" mnemonicParsing="false" onAction="#table5" prefHeight="26.0" prefWidth="51.0" style="-fx-background-radius: 70; -fx-background-color: #09B26F; -fx-border-radius: 70;" text="5" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="25.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="Table6" layoutX="77.0" layoutY="145.0" mnemonicParsing="false" onAction="#table6" prefHeight="26.0" prefWidth="51.0" style="-fx-background-radius: 70; -fx-background-color: #09B26F; -fx-border-radius: 70;" text="6" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Table7" layoutX="77.0" layoutY="209.0" mnemonicParsing="false" onAction="#table7" prefHeight="26.0" prefWidth="51.0" style="-fx-background-radius: 70; -fx-background-color: #09B26F; -fx-border-radius: 70;" text="7" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="4 Seats" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="35.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="184.0" prefHeight="19.0" prefWidth="36.0" text="7 Seats" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="20.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="149.0" prefHeight="19.0" prefWidth="42.0" text="12 Seats" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="36.0" text="6 Seats" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="Table1" layoutX="77.0" layoutY="84.0" mnemonicParsing="false" onAction="#table1" prefHeight="26.0" prefWidth="51.0" style="-fx-background-radius: 70; -fx-background-color: #09B26F; -fx-border-radius: 70;" text="1" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="Table2" layoutX="77.0" layoutY="142.0" mnemonicParsing="false" onAction="#table2" prefHeight="26.0" prefWidth="51.0" style="-fx-background-radius: 70; -fx-background-color: #09B26F; -fx-border-radius: 70;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="35.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="Table4" layoutX="77.0" layoutY="252.0" mnemonicParsing="false" onAction="#table4" prefHeight="26.0" prefWidth="51.0" style="-fx-background-radius: 70; -fx-background-color: #09B26F; -fx-border-radius: 70;" text="4" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="82.0" layoutY="116.0" prefHeight="19.0" prefWidth="42.0" text="5 Seats" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="298.0" layoutY="116.0" prefHeight="19.0" prefWidth="42.0" text="12 Seats" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="298.0" layoutY="202.0" prefHeight="19.0" prefWidth="42.0" text="4 Seats" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="lable" prefHeight="18.0" prefWidth="200.0" text="label" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+      </GridPane>
+      <Button layoutX="119.0" layoutY="383.0" mnemonicParsing="false" onAction="#confirmTable" prefHeight="56.0" prefWidth="162.0" style="-fx-background-color: #09B26F; -fx-background-radius: 30;" text="Confirm" textFill="WHITE" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="121.0" AnchorPane.topAnchor="383.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="72.0" layoutY="14.0" prefHeight="46.0" prefWidth="257.0" text="Table Reservation " textFill="#09b26f" AnchorPane.bottomAnchor="409.6" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="72.39999999999998" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dinner-table.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>
